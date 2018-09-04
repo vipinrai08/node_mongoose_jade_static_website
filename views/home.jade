@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    -var about = aboutData
+    -var menu = menuData
+    -var gallery = galleryData
+    -var chefs = chefsData
+    -var contact = contactData
+    include partials/about
+    include partials/menu
+    include partials/gallery
+    include partials/chefs
+    include partials/contact
