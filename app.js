@@ -8,6 +8,8 @@ var mongo = require('mongodb');
 // mongoose.connect('mongodb://localhost:27017/Touche', { useNewUrlParser: true });
 // var db = mongoose.connection;
 
+const port = process.env.PORT || 5000
+
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
 // View Engine
@@ -25,6 +27,6 @@ router.use(function(req, res, next) {
  app.get('/', homeController.index);
 app.use('/', router);
 
-app.listen(3000, function() {
-	console.log('Live at Port 3000');
+app.listen(port, function() {
+	console.log(`Live at Port ${port}`);
 });
