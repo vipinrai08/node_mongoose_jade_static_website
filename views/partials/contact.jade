@@ -8,18 +8,18 @@ html
           hr
           p  यदि कोई सुझाव है तो कृपया प्रस्तुत करें.
         .col-md-10.col-md-offset-1
-          form#contactForm(name='sentMessage', novalidate='')
+          form(method="post" action="/contact")
             .row
               .col-md-6
-                .form-group
-                  input#name.form-control(type='text', placeholder='Name', required='required')
+            .form-group
+                  input#name.form-control(name='name', placeholder='Name', required='')
                   p.help-block.text-danger
               .col-md-6
-                .form-group
-                  input#email.form-control(type='email', placeholder='Email', required='required')
+            .form-group
+                  input#email.form-control(name='email', placeholder='Email', required='required')
                   p.help-block.text-danger
-                   .form-group
-                  input#phone.form-control(type='Phone Number', placeholder='Phone Number', required='required')
+            .form-group
+                  input#phone.form-control(name='phone_number', placeholder='Phone Number', required='required')
                   p.help-block.text-danger
             .form-group
               textarea#message.form-control(name='message', rows='4', placeholder='Message', required='')
